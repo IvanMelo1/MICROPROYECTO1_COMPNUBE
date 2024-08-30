@@ -1,0 +1,5 @@
+consul agent -data-dir=/tmp/consul -node=web1 -bind=192.168.100.2 -enable-script-checks=true -config-dir=/etc/consul.d 
+
+consul agent -data-dir=/tmp/consul -node=web2 -bind=192.168.100.3 -enable-script-checks=true -config-dir=/etc/consul.d 
+
+consul agent -server -bootstrap-expect=1 -node=haproxy -bind=192.168.100.4 -data-dir=/tmp/consul -enable-script-checks=true -config-dir=/etc/consul.d -ui -client=0.0.0.0
