@@ -23,7 +23,7 @@ Vagrant.configure("2") do |config|
   proxy.vm.network :private_network, ip: "192.168.100.4"
   proxy.vm.hostname = "proxy"
   proxy.vm.provision "shell", path: "script_p.sh"
-  end
+  end 
 end
 
 
